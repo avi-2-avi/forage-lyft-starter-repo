@@ -1,10 +1,10 @@
 from abc import ABC
 
-from ..car import Car
+from engine import Engine
 
 
-class SternmanEngine(Car, ABC):
-    def __init__(self, warning_light_on):
+class SternmanEngine(Engine, ABC):
+    def __init__(self, warning_light_on: bool):
         self.warning_light_on = warning_light_on
 
     def needs_service(self) -> bool:
